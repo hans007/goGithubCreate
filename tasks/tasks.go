@@ -62,7 +62,7 @@ func GoMkdir(owner string, repo string) {
 
 // git clone
 func GoGitClone(owner string, repo string) {
-	url := fmt.Sprintf("https://github.com/%s/%s", owner, repo)
+	url := fmt.Sprintf("https://%s@github.com/%s/%s", owner, owner, repo)
 	path := fmt.Sprintf("%s/src/github.com/%s/%s", os.Getenv("GOPATH"), owner, repo)
 	fmt.Println(fmt.Sprintf("git clone %s %s", url, path))
 	RunExecute("git", "clone", url, path)

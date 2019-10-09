@@ -54,9 +54,11 @@ func main() {
 	if *repoDucafecat {
 		owner = "ducafecat"
 	}
+
 	if *execGo {
-		tasks.GoMkdir(owner, *name)
-		tasks.GoGitClone(owner, *name)
-		tasks.GoVSCodeOpen(owner, *name)
+		tasks.GoMkdir(owner, *name)      // 目录
+		tasks.GoGitClone(owner, *name)   // git clone
+		tasks.GoVSCodeOpen(owner, *name) // vscode open
 	}
+
 }
